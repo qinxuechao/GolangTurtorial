@@ -1,14 +1,14 @@
 package main
 
 import (
-	"fmt"
-	"time"
 	"encoding/json"
+	"fmt"
+	"log"
 	"net/http"
 	"net/url"
-	"strings"
-	"log"
 	"os"
+	"strings"
+	"time"
 )
 
 const IssueURL = "https://developer.github.com/v3/search/#search-issues."
@@ -34,7 +34,7 @@ type IssueSearchResult struct {
 }
 
 // SearchIssues 函数查询 GitHub 的 issue 跟踪接口
-func SearchIssues(terms [] string) (*IssueSearchResult, error) {
+func SearchIssues(terms []string) (*IssueSearchResult, error) {
 	q := url.QueryEscape(strings.Join(terms, " "))
 	resp, err := http.Get(IssueURL + "?q=" + q)
 	if err != nil {
@@ -67,4 +67,3 @@ func main() {
 		fmt.Printf("#%5-d %9.9s %.55s\n", item.Number, item.User.Login, item.Title)
 	}
 }
-

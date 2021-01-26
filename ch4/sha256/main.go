@@ -10,7 +10,7 @@ func main() {
 	ch2 := sha256.Sum256([]byte("X"))
 	// %t 输出一个布尔值
 	// %T 输出一个值的类型
-	fmt.Printf("%x\n%x\n%t\n%T\n", &ch1, &ch2, ch1==ch2, &ch1)
+	fmt.Printf("%x\n%x\n%t\n%T\n", &ch1, &ch2, ch1 == ch2, &ch1)
 	//fmt.Print()
 }
 
