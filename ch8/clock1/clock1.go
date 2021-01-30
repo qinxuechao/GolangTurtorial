@@ -18,7 +18,7 @@ func main() {
 			log.Print(err) // 连接终止
 			continue
 		}
-		go handleConn(conn)  // 一次处理一个连接
+		go handleConn(conn) // 一次处理一个连接
 	}
 }
 
@@ -32,5 +32,3 @@ func handleConn(c net.Conn) {
 		time.Sleep(1 * time.Second)
 	}
 }
-
-

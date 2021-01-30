@@ -14,14 +14,14 @@ func counter(out chan<- int) {
 
 // <- chan int 是一个只能接收的int通道
 // 允许接收但是不能发送
-func squarer(out chan <- int, in <- chan int) {
+func squarer(out chan<- int, in <-chan int) {
 	for v := range in {
 		out <- v * v
 	}
 	close(out)
 }
 
-func printer(in <- chan int) {
+func printer(in <-chan int) {
 	for v := range in {
 		fmt.Println(v)
 	}
@@ -35,6 +35,3 @@ func main() {
 	go squarer(squares, naturals)
 	printer(squares)
 }
-
-
-
