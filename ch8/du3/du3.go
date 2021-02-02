@@ -95,7 +95,7 @@ func main() {
 loop:
 	for {
 		select {
-		case <- done:
+		case <-done:
 			for range fileSizes {
 				// Do nothing
 			}
