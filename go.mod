@@ -1,4 +1,4 @@
-module awesomeProject
+module GolangTurtorial
 
 go 1.15
 
