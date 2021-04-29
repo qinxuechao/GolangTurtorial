@@ -1,8 +1,8 @@
 package memo_test
 
 import (
-	memo "awesomeProject/ch9/memo3"
-	"awesomeProject/ch9/memotest"
+	memo "GolangTurtorial/ch9/memo3"
+	"GolangTurtorial/ch9/memotest"
 	"testing"
 )
 

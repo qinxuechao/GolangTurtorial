@@ -11,7 +11,7 @@ import (
 	"os"
 	"sync"
 
-	"awesomeProject/ch8/thumbnail"
+	"GolangTurtorial/ch8/thumbnail"
 )
 
 //!+1
