@@ -1,4 +1,4 @@
-module moduleName
+module GolangTurtorial
 
 go 1.15
 
